@@ -1,12 +1,13 @@
 import com.lowagie.text.DocumentException;
 
+import javax.swing.*;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Main {
 
     public static void main(String[] args) {
-        Connection conn = new Connection();
+        /*Connection conn = new Connection();
 
         try {
             conn.connect();
@@ -24,6 +25,13 @@ public class Main {
             System.out.println("Could not read/write file");
         } catch (DocumentException de){
             System.out.println("could not reach document");
-        }
+        }*/
+
+        JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
+        frame.add(new GUI());
+        frame.pack();
+        frame.setVisible(true);
     }
 }
